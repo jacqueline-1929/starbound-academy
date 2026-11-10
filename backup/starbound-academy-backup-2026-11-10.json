@@ -1,0 +1,114 @@
+{
+  "current": "Robby",
+  "portfolio": "Robby",
+  "progress": [
+    {
+      "id": "3429ec23-6b7f-4ba8-87d7-2dbeb2b63687",
+      "learner": "Robby",
+      "subject": "music",
+      "lessonId": "r-mus-1",
+      "title": "Rhythm code",
+      "skill": "MU:Pr4 · perform rhythmic patterns",
+      "date": "2026-11-10T17:57:52.252Z",
+      "kind": "mission"
+    },
+    {
+      "id": "8f2d4837-aece-4ac5-9f2f-08064f0b0a88",
+      "learner": "Robby",
+      "subject": "science",
+      "lessonId": "r-sci-1",
+      "title": "Push power lab",
+      "skill": "K-PS2-1 · strength of pushes",
+      "date": "2026-11-10T17:52:18.102Z",
+      "kind": "mission"
+    },
+    {
+      "id": "5080b7fc-7ad4-4266-8ca3-d6862177916a",
+      "learner": "Robby",
+      "subject": "math",
+      "lessonId": "r-math-1",
+      "title": "Which quantity is greater?",
+      "skill": "Davydov · comparison and relation",
+      "date": "2026-11-10T17:50:49.116Z",
+      "kind": "mission"
+    },
+    {
+      "id": "c6604976-11c2-480d-a1cd-2d9301bb8f19",
+      "learner": "Robby",
+      "subject": "reading",
+      "lessonId": "r-ph-1",
+      "title": "Power-up phonemes",
+      "skill": "RF.1.2 · blending phonemes",
+      "date": "2026-11-10T17:46:51.745Z",
+      "kind": "mission"
+    },
+    {
+      "id": "23094fb4-32d3-4c32-ba22-8a1e67d7affb",
+      "learner": "Tommy",
+      "subject": "math",
+      "lessonId": "t-math-2",
+      "title": "Unknown reactor core",
+      "skill": "2.OA · relational equality",
+      "date": "2026-11-10T17:32:35.077Z",
+      "kind": "mission"
+    },
+    {
+      "id": "34cbee39-8484-4d39-8d49-751a35830ed1",
+      "learner": "Tommy",
+      "subject": "writing",
+      "lessonId": "t-write-1",
+      "title": "Write the next clash",
+      "skill": "W.2.3 · narrative sequence and detail",
+      "date": "2026-11-10T17:28:17.390Z",
+      "kind": "mission"
+    },
+    {
+      "id": "eadb0441-3bb1-4cfd-bef9-4646c86bcf70",
+      "learner": "Tommy",
+      "subject": "reading",
+      "lessonId": "t-read-1",
+      "title": "The zero-hour meteor",
+      "skill": "RL.2.1–3 · grade 3–5 stretch",
+      "date": "2026-11-10T17:26:07.035Z",
+      "kind": "mission"
+    },
+    {
+      "id": "e2e9b11b-2fba-4b90-a8da-6ea1ce43ded7",
+      "learner": "Tommy",
+      "subject": "math",
+      "lessonId": "t-math-1",
+      "title": "Relations before numbers",
+      "skill": "Davydov · A = B + C",
+      "date": "2026-11-10T17:21:51.320Z",
+      "kind": "mission"
+    },
+    {
+      "id": "61f9dfdf-8277-49be-a6d2-06f7b3a55491",
+      "learner": "Tommy",
+      "subject": "music",
+      "lessonId": "t-mus-1",
+      "title": "Rhythm code",
+      "skill": "MU:Pr4 · perform rhythmic patterns",
+      "date": "2026-11-10T17:16:13.436Z",
+      "kind": "mission"
+    },
+    {
+      "id": "a52ccfe7-e331-41d0-ab91-e99446bcae38",
+      "learner": "Tommy",
+      "subject": "spanish",
+      "lessonId": "t-sp-1",
+      "title": "Meet your teammate",
+      "skill": "ACTFL Novice · interpersonal communication",
+      "date": "2026-11-10T16:33:16.786Z",
+      "kind": "mission"
+    }
+  ],
+  "entries": [],
+  "drafts": {
+    "t-write-1": "A T Rex hopped out of the meteor's eye. A big semi-truck fell onto its side and crashed into the meteor. One of the pipes fell out of the truck and hit Vex in the face and Vex was knocked out."
+  },
+  "customLessons": [],
+  "musicLibrary": [],
+  "featuredIds": [],
+  "exportedAt": "2026-11-10T18:16:55.568Z"
+}
