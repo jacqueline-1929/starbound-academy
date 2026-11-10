@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11143b">
+  <title>Starbound Academy</title>
+  <meta name="description" content="Robby and Tommy's private homeschool quest world.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extras.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the adventure</a>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="topbar">
+    <button class="brand" data-view="world" aria-label="Go to world map"><span class="brand-mark">S</span><span>Starbound<br>Academy</span></button>
+    <nav aria-label="Main navigation">
+      <button class="nav-btn active" data-view="world">World map</button>
+      <button class="nav-btn" data-view="log">Family log</button>
+      <button class="nav-btn" data-view="portfolio">Portfolio</button>
+    </nav>
+    <button id="profileButton" class="profile-chip" aria-label="Switch learner"></button>
+  </header>
+
+  <main id="main">
+    <section id="worldView" class="view active" aria-labelledby="welcomeTitle">
+      <div class="mission-strip">
+        <div>
+          <p id="todayLabel" class="soft-label"></p>
+          <h1 id="welcomeTitle">Choose your next mission.</h1>
+          <p id="learnerNote" class="lede"></p>
+        </div>
+        <div class="energy-orb" aria-label="Mission progress"><span id="orbCount">0</span><small>stars earned</small></div>
+      </div>
+
+      <div class="world-map art-map" aria-label="Learning worlds">
+        <svg class="flight-path" viewBox="0 0 1000 470" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M95 320 C240 120, 350 430, 500 230 S780 70, 910 250"/>
+        </svg>
+        <button class="planet planet-reading" data-subject="reading"><span class="planet-art">Aa</span><span class="planet-copy"><b>Story Nebula</b><small>Reading quests</small></span></button>
+        <button class="planet planet-writing" data-subject="writing"><span class="planet-art">✎</span><span class="planet-copy"><b>Writer's Forge</b><small>Create & explain</small></span></button>
+        <button class="planet planet-math" data-subject="math"><span class="planet-art">=</span><span class="planet-copy"><b>Measure Moon</b><small>Patterns & arithmetic</small></span></button>
+        <button class="planet planet-science" data-subject="science"><span class="planet-art">⚡</span><span class="planet-copy"><b>Force Frontier</b><small>Test the universe</small></span></button>
+        <button class="planet planet-music" data-subject="music"><span class="planet-art">♫</span><span class="planet-copy"><b>Rhythm Grove</b><small>Music labs</small></span></button>
+        <button class="planet planet-spanish" data-subject="spanish"><span class="planet-art">¡Hola!</span><span class="planet-copy"><b>Plaza del Sol</b><small>Elementary Spanish</small></span></button>
+        <div class="rocket" aria-hidden="true">▲<i></i></div>
+      </div>
+      <div class="daily-card">
+        <span class="daily-icon">✦</span>
+        <div><b>Captain's challenge</b><p id="dailyChallenge">Complete one mission and explain one idea out loud.</p></div>
+        <button class="text-btn" data-subject="math">Launch</button>
+      </div>
+    </section>
+
+    <section id="subjectView" class="view" aria-labelledby="subjectTitle">
+      <button class="back-btn" data-view="world">‹ World map</button>
+      <div class="subject-head"><div><p id="subjectKicker" class="soft-label"></p><h1 id="subjectTitle"></h1><p id="subjectIntro" class="lede"></p></div><div id="subjectGlyph" class="subject-glyph"></div></div>
+      <div id="lessonGrid" class="lesson-grid"></div>
+    </section>
+
+    <section id="logView" class="view parent-view" aria-labelledby="logTitle">
+      <div class="parent-head"><div><p class="soft-label">Grown-up view</p><h1 id="logTitle">Family learning log</h1><p class="lede">Every completed mission becomes evidence. Add offline discoveries here too.</p></div><button id="addEntryBtn" class="primary">+ Add learning note</button></div>
+      <div id="summaryStats" class="summary-stats"></div>
+      <div class="filter-row"><label>Show learner <select id="logLearner"><option value="all">Both learners</option><option>Robby</option><option>Tommy</option></select></label><label>Show subject <select id="logSubject"><option value="all">All subjects</option><option value="reading">Reading</option><option value="writing">Writing</option><option value="math">Math</option><option value="science">Science</option><option value="music">Music</option><option value="spanish">Spanish</option></select></label></div>
+      <div id="activityLog" class="activity-log"></div>
+      <div class="data-tools"><div><b>Keep a safe copy</b><p>Records live on this device. Export a backup regularly.</p></div><button id="exportBtn">Export backup</button><label class="file-button">Import backup<input id="importInput" type="file" accept="application/json"></label></div>
+    </section>
+
+    <section id="portfolioView" class="view parent-view" aria-labelledby="portfolioTitle">
+      <div class="parent-head"><div><p class="soft-label">Year-to-date collection</p><h1 id="portfolioTitle">Learning portfolio</h1><p class="lede">A living record of work, growth, and next steps.</p></div><button id="printBtn" class="primary">Print / save PDF</button></div>
+      <div class="portfolio-switch" role="group" aria-label="Choose portfolio"><button class="selected" data-portfolio="Robby">Robby</button><button data-portfolio="Tommy">Tommy</button></div>
+      <article id="portfolioPaper" class="portfolio-paper"></article>
+    </section>
+  </main>
+
+  <dialog id="profileDialog" class="profile-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button><p class="soft-label">Who's exploring?</p><h2>Choose a captain</h2><div class="profile-options"><button value="Robby" data-profile="Robby"><span class="avatar robby">R</span><b>Robby</b><small>Age 6 · phonics path</small></button><button value="Tommy" data-profile="Tommy"><span class="avatar tommy">T</span><b>Tommy</b><small>Age 7 · advanced reader</small></button></div></form>
+  </dialog>
+
+  <dialog id="lessonDialog" class="lesson-dialog"><div id="lessonContent"></div></dialog>
+  <dialog id="entryDialog" class="entry-dialog">
+    <form id="entryForm"><button type="button" class="dialog-close" data-close="entryDialog">×</button><p class="soft-label">Add evidence</p><h2>Record a learning moment</h2><label>Learner<select name="learner"><option>Robby</option><option>Tommy</option></select></label><label>Subject<select name="subject"><option value="reading">Reading</option><option value="writing">Writing</option><option value="math">Math</option><option value="science">Science</option><option value="music">Music</option><option value="spanish">Spanish</option></select></label><label>What happened?<textarea name="note" required placeholder="Built a paper bridge and explained why the folds made it stronger..."></textarea></label><label>Skills or next step<input name="skills" placeholder="testing, observation, explaining evidence"></label><button class="primary" type="submit">Save to portfolio</button></form>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+  <script type="module" src="three-labs.js"></script>
+</body>
+</html>
