@@ -65,7 +65,7 @@ Tommy:{
  ]}
 };
 
-const defaultState={current:'Robby',portfolio:'Robby',progress:[],entries:[],drafts:{},customLessons:[],musicLibrary:[],featuredIds:[]};
+const defaultState={current:'Robby',portfolio:'Robby',progress:[],entries:[],drafts:{},customLessons:[],musicLibrary:[],featuredIds:[],sliceProgress:{},pointsLedger:[],artifacts:[]};
 let state=loadState();let currentSubject='reading';let currentLesson=null;let speech=null;
 function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem('starbound-state')||'{}')}}catch{return {...defaultState}}}
 function saveState(){localStorage.setItem('starbound-state',JSON.stringify(state))}
