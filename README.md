@@ -38,7 +38,15 @@ creations, and portfolio history continue across all four.
 
 ## Run locally
 
-Serve the `dist` directory with any static web server, then open it in a modern browser.
+On a Mac, double-click **Start Starbound Academy.command** in this folder. It
+starts the local school and opens **http://localhost:4173/** in your browser.
+Always use that same address and browser profile: completed lessons, stars,
+music, and portfolios are saved by browser address. Opening `dist/index.html`
+directly as a `file://` URL shows a separate copy with separate storage.
+
+Alternatively, serve the `dist` directory with a static web server at port
+4173, then open http://localhost:4173/ in a modern browser. Export a backup
+from **Family log** regularly, especially before clearing browser data.
 
 The application is self-contained and is not coupled to ChatGPT or Sites hosting.
 

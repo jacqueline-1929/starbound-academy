@@ -1,0 +1,25 @@
+.file-access-notice:not([hidden]) {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  padding: 14px max(20px, 5vw);
+  background: #fff3c4;
+  color: #33244d;
+  border-bottom: 3px solid #ffc24b;
+  font: 16px/1.4 "Atkinson Hyperlegible", sans-serif;
+}
+.file-access-notice strong { font-weight: 700; }
+.file-access-notice span { flex: 1 1 370px; }
+.file-access-notice a {
+  display: inline-block;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: #33244d;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.file-access-notice a:focus-visible { outline: 3px solid #16848c; outline-offset: 3px; }

@@ -14,9 +14,15 @@
   <link rel="stylesheet" href="lesson-slices.css">
   <link rel="stylesheet" href="progress-roadmap.css">
   <link rel="stylesheet" href="sound-adventures.css">
+  <link rel="stylesheet" href="access-notice.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to the adventure</a>
+  <aside id="fileAccessNotice" class="file-access-notice" hidden role="alert">
+    <strong>Looking for Robby and Tommy's saved work?</strong>
+    <span>This file opens a separate, empty copy. Start the school with <b>Start Starbound Academy.command</b> in the project folder, then use the original address.</span>
+    <a href="http://localhost:4173/">Open my school and saved work →</a>
+  </aside>
   <div class="stars" aria-hidden="true"></div>
   <header class="topbar">
     <button class="brand" data-view="world" aria-label="Go to world map"><span class="brand-mark">S</span><span>Starbound<br>Academy</span></button>
@@ -93,6 +99,7 @@
     <form id="planForm"><button type="button" class="dialog-close" data-close="planDialog">×</button><p class="soft-label">Lesson builder</p><h2>Plan a new mission</h2><div class="form-pair"><label>Learner<select name="learner"><option>Robby</option><option>Tommy</option></select></label><label>Subject<select name="subject"><option value="reading">Reading</option><option value="writing">Writing</option><option value="math">Math</option><option value="science">Science</option><option value="music">Music</option><option value="spanish">Spanish</option></select></label></div><label>Mission title<input name="title" required placeholder="Build a cup-and-string telephone"></label><label>Skill or goal<input name="skill" required placeholder="Ask a question, test, and explain evidence"></label><label>Instructions<textarea name="instructions" required placeholder="Gather two cups and string. Predict what will happen, build it, then test from three distances."></textarea></label><label>Portfolio evidence prompt<input name="prompt" required placeholder="What changed the sound? Record a sentence, drawing, or parent note."></label><button class="primary" type="submit">Add mission to the world</button></form>
   </dialog>
   <div id="toast" role="status" aria-live="polite"></div>
+  <script>if (location.protocol === 'file:') document.getElementById('fileAccessNotice').hidden = false;</script>
   <script src="app.js"></script>
   <script src="lesson-slices.js"></script>
   <script src="sound-adventures.js"></script>
