@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="extras.css">
   <link rel="stylesheet" href="lesson-slices.css">
+  <link rel="stylesheet" href="progress-roadmap.css">
+  <link rel="stylesheet" href="sound-adventures.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to the adventure</a>
@@ -54,11 +56,12 @@
         <div><b>Captain's challenge</b><p id="dailyChallenge">Complete one mission and explain one idea out loud.</p></div>
         <button class="text-btn" data-subject="math">Launch</button>
       </div>
+      <section id="roadmapProgress" class="roadmap-progress" aria-label="Grade progress by subject"></section>
     </section>
 
     <section id="subjectView" class="view" aria-labelledby="subjectTitle">
       <button class="back-btn" data-view="world">‹ World map</button>
-      <div class="subject-head"><div><p id="subjectKicker" class="soft-label"></p><h1 id="subjectTitle"></h1><p id="subjectIntro" class="lede"></p></div><div id="subjectGlyph" class="subject-glyph"></div></div>
+      <div class="subject-head"><div><p id="subjectKicker" class="soft-label"></p><h1 id="subjectTitle"></h1><p id="subjectIntro" class="lede"></p><div id="subjectProgress" class="subject-progress"></div></div><div id="subjectGlyph" class="subject-glyph"></div></div>
       <div id="lessonGrid" class="lesson-grid"></div>
     </section>
 
@@ -92,6 +95,8 @@
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
   <script src="lesson-slices.js"></script>
+  <script src="sound-adventures.js"></script>
+  <script src="progress-roadmap.js"></script>
   <script type="module" src="three-labs.js"></script>
 </body>
 </html>

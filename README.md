@@ -54,10 +54,50 @@ Open **Story Nebula** for either learner:
   lesson covering prediction, causality, system relationships, relevant
   evidence, transfer, written defense, and optional story revision.
 
+Open **Measure Moon** for either learner:
+
+- Robby begins with **The Moon Bridge Equality Engine**, a five-part grade 1
+  lesson that moves from direct comparison to whole/part/difference models,
+  missing parts, relational equations, a bridge application, and a boss model.
+- Tommy begins with **The Reactor Equality Paradox**, a five-part grade 2
+  lesson that treats equality as sameness of value, preserves quantities while
+  transforming expressions, varies the unknown's position, includes error
+  analysis, and ends with a written mathematical argument.
+
+The next mission after each initial slice is a playable sound adventure:
+
+- Robby's **Beat Bridge** and Tommy's **Loop Reactor** ask children to listen,
+  copy notes and rests, repair a missing beat, count, repeat equal loops, and
+  remove one note from each loop. Normal/Hard/Master vary the number of loops;
+  Tommy's array stays within the grade 2 limit of 25 objects.
+- Robby's **Cat and the Sound Song** maps ordered phonemes to colored pitches,
+  then has him spell short-a CVC words, arrange a sentence, change one initial
+  sound, name a pet, and choose a story ending. The pitch is a memory cue;
+  speaking, blending, decoding, and encoding remain the reading goals.
+- Tommy's **Cheesia and the Shadow Cape** is a series of short forest scenes.
+  His named pet and route change the next scene. Two ending choices resolve the
+  same plant-needs problem, and a written science reason completes the boss.
+
+These four lessons are defined in `dist/sound-adventures.js`, with their
+presentation in `dist/sound-adventures.css`. Each uses the guided lesson archive
+and can be expanded through the same registration and five-stage functions.
+Standards checked against [Florida's grade 1 mathematics course](https://www.cpalms.org/Public/PreviewCourse/Preview/10320),
+[Florida's grade 2 mathematics benchmarks](https://resources.finalsite.net/images/v1745409382/escambiaschoolsorg/f8khantyjbmzjgnmuu0c/Mathematics_Standards_Grade_2_CPALMS.pdf),
+[Florida's ELA standards](https://www.fldoe.org/core/fileparse.php/7539/urlt/elabeststandardsfinal.pdf),
+and [Florida's K–2 science item specifications](https://www.fldoe.org/core/fileparse.php/5423/urlt/fl-item-spec-sci-k-2-wt-r2g.pdf).
+
 Both slices autosave, support Normal/Hard/Master selection, record read-aloud
 and hints separately from independent evidence, include an optional read-along
 chapter, award difficulty-scaled points, and permit an immediate boss attempt.
 The legacy backup JSON remains importable through **Family log → Import backup**.
+
+## Grade journey progress
+
+The world map and each subject page now show a learner-specific grade journey.
+Each subject is divided into 36 dated evidence checkpoints across four arcs:
+Launch, Build, Explore, and Exhibit. A completed lesson advances the relevant
+subject bar immediately. The meter reports completed evidence, not a mastery
+claim; mastery remains a separate parent review decision.
 
 ## Current prototype deployment
 
