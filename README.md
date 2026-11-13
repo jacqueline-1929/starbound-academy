@@ -78,13 +78,17 @@ The next mission after each initial slice is a playable sound adventure:
   copy notes and rests, repair a missing beat, count, repeat equal loops, and
   remove one note from each loop. Normal/Hard/Master vary the number of loops;
   Tommy's array stays within the grade 2 limit of 25 objects.
-- Robby's **Cat and the Sound Song** maps ordered phonemes to colored pitches,
-  then has him spell short-a CVC words, arrange a sentence, change one initial
-  sound, name a pet, and choose a story ending. The pitch is a memory cue;
-  speaking, blending, decoding, and encoding remain the reading goals.
+- Robby's **Cat and the Sound Song** gives each printed phoneme a tappable,
+  pitched voice cue (C/Do, A/So, T/Mi) and sings the sounds in order before
+  saying the blended word. He then spells short-a CVC words, arranges a
+  sentence, changes one initial sound, names a pet, and chooses an ending.
+  Browser speech voices vary, so the pitch is a musical cue rather than a
+  guaranteed concert note; clean phoneme modeling remains part of read-along.
 - Tommy's **Cheesia and the Shadow Cape** is a series of short forest scenes.
-  His named pet and route change the next scene. Two ending choices resolve the
-  same plant-needs problem, and a written science reason completes the boss.
+  A little moss fox helps Cheesia first, and Tommy names it afterward. His
+  route changes the next scene. Two ending choices resolve the same plant-needs
+  problem, a written science reason completes the boss, and he can draw the
+  fox for his inspectable portfolio page.
 
 These four lessons are defined in `dist/sound-adventures.js`, with their
 presentation in `dist/sound-adventures.css`. Each uses the guided lesson archive

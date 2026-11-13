@@ -923,7 +923,14 @@ function bindDrawing(root, session) {
     context.fillStyle = '#fffdf3'; context.fillRect(0, 0, canvas.width, canvas.height);
     context.lineCap = 'round'; context.lineJoin = 'round'; context.lineWidth = 8;
     for (const stroke of drawing.strokes || []) {
-      if (stroke.points.length < 2) continue;
+      if (stroke.points.length === 1) {
+        context.fillStyle = stroke.color;
+        context.beginPath();
+        context.arc(stroke.points[0].x * canvas.width, stroke.points[0].y * canvas.height, 4, 0, Math.PI * 2);
+        context.fill();
+        continue;
+      }
+      if (!stroke.points.length) continue;
       context.strokeStyle = stroke.color; context.beginPath();
       stroke.points.forEach((point, index) => index ? context.lineTo(point.x * canvas.width, point.y * canvas.height) : context.moveTo(point.x * canvas.width, point.y * canvas.height));
       context.stroke();
@@ -938,11 +945,12 @@ function bindDrawing(root, session) {
   root.querySelectorAll('[data-draw-color]').forEach(button => button.addEventListener('click', () => { drawing.color = button.dataset.drawColor; saveState(); root.querySelectorAll('[data-draw-color]').forEach(item => item.classList.toggle('selected', item === button)); }));
   root.querySelector('[data-clear-drawing]')?.addEventListener('click', () => { drawing.strokes = []; saveState(); redraw(); });
   root.querySelector('[data-save-drawing]')?.addEventListener('click', () => {
+    if (!drawing.strokes.some(stroke => stroke.points?.length)) { showToast('Draw something first, then save it.'); return; }
     state.artifacts ||= [];
     drawing.label = $('#drawingLabel').value.trim();
     const artifactId = `${sliceKey()}:drawing`;
     const existing = state.artifacts.find(item => item.id === artifactId);
-    const fallbackTitle = activeSlice.subject === 'math' ? 'Equality model' : 'Short-a snack creature';
+    const fallbackTitle = activeSlice.slice === 'forest-branch' ? `${session.answers.petName || 'Moss fox'} the brave fox` : activeSlice.subject === 'math' ? 'Equality model' : 'Short-a snack creature';
     const artifact = { id: artifactId, learner: state.current, lessonId: activeSlice.id, type: 'drawing', title: drawing.label || fallbackTitle, date: new Date().toISOString(), strokes: drawing.strokes };
     if (existing) Object.assign(existing, artifact); else state.artifacts.push(artifact);
     saveState(); showToast('Drawing saved with the mission.');
