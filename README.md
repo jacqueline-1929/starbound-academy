@@ -74,10 +74,13 @@ Open **Measure Moon** for either learner:
 
 The next mission after each initial slice is a playable sound adventure:
 
-- Robby's **Beat Bridge** and Tommy's **Loop Reactor** ask children to listen,
-  copy notes and rests, repair a missing beat, count, repeat equal loops, and
-  remove one note from each loop. Normal/Hard/Master vary the number of loops;
-  Tommy's array stays within the grade 2 limit of 25 objects.
+- Robby's **Beat Bridge** and Tommy's **Loop Reactor** begin with a visible,
+  audible worked example. Children then remember a short melody with distinct
+  pitched notes and a clap cue for the rest, rebuild it one beat at a time,
+  restore a missing pitch, count the pitched notes, repeat equal loops, and
+  remove one note from each loop. The clap marks time but is not counted as a
+  pitched note. Normal/Hard/Master vary the number of loops; Tommy's array
+  stays within the grade 2 limit of 25 objects.
 - Robby's **Cat and the Sound Song** gives each printed phoneme a tappable,
   pitched voice cue (C/Do, A/So, T/Mi) and sings the sounds in order before
   saying the blended word. He then spells short-a CVC words, arranges a
